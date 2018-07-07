@@ -1,0 +1,31 @@
+
+#!/usr/bin/env python2
+from mininet.topo import Topo
+from mininet.net import Mininet
+
+#設定Controller
+coroller =net.addController(name=’controller0′,
+controller=RemoteController,
+ip=REMOTE_CONTROLLER_IP,
+port6633)
+
+#產生Switchs
+info(reate Switch node\n")
+switch = net.addSwitch(‘s1’)
+
+#產生Ho
+info(“Create Host node\n")
+host1 = net.addHost(‘h1′, ip=’10.0.0.1’)
+host2 = net.ad
+#產生LINKs
+info(“Link switch to host\n")
+net.addLink(switch, host1)
+net.addLink(switch, host2)
+
+#啟動
+info(“Start network\n")
+net.start()
+
+#增加Flow
+info(“Adding Flow\n")
+switch.cmdPrint(‘ovs-ofctl add-flow s1 in_port=1,actions=ou
