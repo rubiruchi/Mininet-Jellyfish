@@ -4,8 +4,6 @@ Mininet: Rapid Prototyping for Software Defined Networks
 
 Mininet 2.3.0d1
 
-[![Build Status][1]](https://travis-ci.org/mininet/mininet)
-
 ### run jellyfish topology in Mininet?
 
 Mininet emulates a complete network of hosts, links, and switches
